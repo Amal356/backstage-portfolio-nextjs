@@ -1,4 +1,4 @@
-# Activité 9 – Platform Engineering avec Backstage : cycle de vie d'un Portfolio Next.js
+# Platform Engineering avec Backstage : industrialisation du cycle de vie d'un Portfolio Next.js
 
 **Backstage** (projet open source créé par Spotify, CNCF) est un **portail développeur** : un site interne où le développeur remplit un formulaire et obtient un projet prêt à l'emploi. L'équipe plateforme y publie des **Software Templates** (« chemins tout tracés ») qui automatisent la création, le build, la publication et le déploiement.
 
@@ -93,6 +93,7 @@ Modification du code (template « Évolution », pull request fusionnée)
 | 7. Pull request v2 ouverte par Backstage | ![PR](screenshots/05b-evolution-pull-request.png) |
 | 7. Contenu de la pull request v2 | ![PR v2](screenshots/05c-pull-request-v2.png) |
 | 7. Pull request v2 fusionnée → relance du pipeline | ![fusion](screenshots/06-pr-v2-fusionnee.png) |
+| 2 et 7. Historique des tâches Backstage : création (09:50) et évolution v2 (10:02), toutes deux `completed` | ![tâches](screenshots/07-backstage-taches-terminees.png) |
 
 ## Résultat final (livraison v5)
 
