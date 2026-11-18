@@ -89,6 +89,7 @@ Modification du code (template « Évolution », pull request fusionnée)
 | 1. Templates disponibles dans Backstage | ![templates](screenshots/01a-backstage-templates.png) |
 | 1. Formulaire du template Portfolio Next.js | ![formulaire](screenshots/01b-formulaire-portfolio.png) |
 | 2. Dépôt GitHub créé et composant enregistré dans le Catalogue | ![création](screenshots/02-creation-depot-catalogue.png) |
+| 2. Composant « Portfolio de Amal Jemli » dans le Catalogue (liens application, pipeline, Docker Hub) | ![catalogue](screenshots/08-catalogue-composant-portfolio.png) |
 | 7. Formulaire du template « Évolution » (v2) | ![évolution](screenshots/05a-formulaire-evolution.png) |
 | 7. Pull request v2 ouverte par Backstage | ![PR](screenshots/05b-evolution-pull-request.png) |
 | 7. Contenu de la pull request v2 | ![PR v2](screenshots/05c-pull-request-v2.png) |
