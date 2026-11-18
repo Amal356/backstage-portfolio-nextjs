@@ -39,7 +39,7 @@ npx @backstage/create-app@latest --path ~/backstage      # application Backstage
 cd ~/backstage
 yarn config set httpTimeout 600000 && yarn config set networkConcurrency 8
 yarn install
-cp ~/backstage-portfolio-nextjs/backstage/app-config.local.yaml .
+cp ~/cv-devsecops/47-backstage/backstage/app-config.local.yaml .
 read -rsp "Jeton GitHub : " GITHUB_TOKEN; export GITHUB_TOKEN   # jamais écrit dans un fichier
 yarn start                                                       # interface http://localhost:3001, API :7007
 ```
@@ -81,6 +81,18 @@ Modification du code (template « Évolution », pull request fusionnée)
 - **Livraison v4 : `npm ci` toujours bloqué dans le conteneur de build** (527 s) : le réseau *bridge* de Docker ajouté au NAT de VirtualBox coupait les longs téléchargements. Test : `docker run --rm --network host node:22-alpine npm view next version` répond. Correction : `docker build --network host`. **Livraison v5 réussie** (build, Docker Hub `v5` + `latest`, déploiement, santé).
 - **Disque de la VM à 96 %** après l'installation : caches Yarn, npm et images Docker inutilisées supprimés ; K3s, Harbor et Jenkins arrêtés pendant l'activité (sans rien supprimer).
 - **Runner auto-hébergé sur un dépôt public** : GitHub le déconseille (une pull request externe pourrait exécuter du code sur la VM). Acceptable pour un TP local ; en entreprise : dépôt privé, runners éphémères ou approbation obligatoire des workflows venant de forks.
+
+## Démonstration du workflow Backstage (livrables 8 et 9)
+
+| Étape | Capture |
+| :--- | :--- |
+| 1. Templates disponibles dans Backstage | ![templates](screenshots/01a-backstage-templates.png) |
+| 1. Formulaire du template Portfolio Next.js | ![formulaire](screenshots/01b-formulaire-portfolio.png) |
+| 2. Dépôt GitHub créé et composant enregistré dans le Catalogue | ![création](screenshots/02-creation-depot-catalogue.png) |
+| 7. Formulaire du template « Évolution » (v2) | ![évolution](screenshots/05a-formulaire-evolution.png) |
+| 7. Pull request v2 ouverte par Backstage | ![PR](screenshots/05b-evolution-pull-request.png) |
+| 7. Contenu de la pull request v2 | ![PR v2](screenshots/05c-pull-request-v2.png) |
+| 7. Pull request v2 fusionnée → relance du pipeline | ![fusion](screenshots/06-pr-v2-fusionnee.png) |
 
 ## Résultat final (livraison v5)
 
